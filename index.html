@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You 💌</title>
+  <style>
+    body {
+      background: #fdecef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Georgia, serif;
+    }
+
+    .envelope {
+      width: 220px;
+      height: 140px;
+      background: #f8b4c4;
+      cursor: pointer;
+      text-align: center;
+      line-height: 140px;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+
+    .letter {
+      display: none;
+      background: white;
+      padding: 20px;
+      width: 260px;
+      margin-top: 20px;
+      border-radius: 6px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CLICK THIS -->
+  <div class="envelope" onclick="openLetter()">
+    💌 Click Me
+  </div>
+
+  <div class="letter" id="letter">
+    <h3>Dear You ❤️</h3>
+    <p>
+      Somewhere between the little moments  
+      and the laughs I didn’t expect,  
+      I fell for you.
+    </p>
+    <p>
+      This is me choosing you. Always.
+    </p>
+    <p>— Me 💕</p>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.getElementById("letter").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
