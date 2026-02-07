@@ -2,37 +2,61 @@
 <html>
 <head>
   <title>For You 💌</title>
-  <style>
-    body {
-      background: #fdecef;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Georgia, serif;
-    }
+<style>
+  body {
+    background: #fdecef;
+    font-family: Georgia, serif;
+    text-align: center;
+    padding-top: 80px;
+  }
 
-    .envelope {
-      width: 220px;
-      height: 140px;
-      background: #f8b4c4;
-      cursor: pointer;
-      text-align: center;
-      line-height: 140px;
-      border-radius: 6px;
-      font-size: 18px;
-    }
+  .hint {
+    color: #c96b85;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
 
-    .letter {
-      display: none;
-      background: white;
-      padding: 20px;
-      width: 260px;
-      margin-top: 20px;
-      border-radius: 6px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-  </style>
+  .envelope {
+    width: 220px;
+    height: 140px;
+    background: #f8b4c4;
+    margin: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    transition: transform 0.3s;
+  }
+
+  .envelope:hover {
+    transform: scale(1.05);
+  }
+
+  .letter {
+    background: white;
+    margin: 25px auto;
+    padding: 20px;
+    width: 85%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+
+    /* animation stuff */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .letter.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+</style>
 </head>
 
 <body>
@@ -43,23 +67,24 @@
   </div>
 
   <div class="letter" id="letter">
-    <h3>Dear You ❤️</h3>
+    <h3>To My Lei, ❤️</h3>
     <p>
-      Somewhere between the little moments  
-      and the laughs I didn’t expect,  
-      I fell for you.
+      No words can explain how much I adore you in things you do to me,
+      I would like to take this chance of saying how much thankful I am I have you. 
+      Let's make everything official. I love you always, and in all ways.
+
     </p>
     <p>
       This is me choosing you. Always.
     </p>
-    <p>— Me 💕</p>
+    <p>— Love, Teffy.</p>
   </div>
 
-  <script>
-    function openLetter() {
-      document.getElementById("letter").style.display = "block";
-    }
-  </script>
+<script>
+  function openLetter() {
+    document.getElementById("letter").style.display = "block";
+  }
+</script>
 
 </body>
 </html>
